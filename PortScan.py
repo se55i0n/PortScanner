@@ -10,7 +10,6 @@ from time import time
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
-#多进程模块里的多线程
 from multiprocessing.dummy import Pool as ThreadPool
 from multiprocessing.dummy import Lock
 
