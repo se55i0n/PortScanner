@@ -127,7 +127,7 @@ class Scanner(object):
 		except Exception as e:
 			print e
 		except KeyboardInterrupt:
-			print self.R + '\n[-] user aborded!'
+			print self.R + u'\n[-] 用户终止扫描...'
 			sys.exit(1)
 
 	def check_target(self):
