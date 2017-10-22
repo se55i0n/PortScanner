@@ -49,7 +49,7 @@ class Scanner(object):
 		except:
 			pass
 		finally:
-			if len(set(list(self.result))) == 3:
+			if len(set(list(self.result))) > 1:
 				return True
 			else:
 				return False
@@ -153,7 +153,7 @@ if __name__ == '__main__':
  / ____/ /_/ / /  / /_ ___/ / /__/ /_/ / / / / / / /  __/ /
 /_/    \____/_/   \__//____/\___/\__,_/_/ /_/_/ /_/\___/_/ 
 			                        
-			                     Code by se55i0n
+			                      Code by se55i0n
 			'''
 	
 	print '\033[1;34m'+ banner +'\033[0m'
