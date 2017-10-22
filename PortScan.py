@@ -118,13 +118,17 @@ class Scanner(object):
 			print '-'*60
 			#线程数
 			pool = ThreadPool(processes=50)
-			pool.map(self.run,self.ports)
+			#get传递超时时间，用于捕捉ctrl+c
+			pool.map_async(self.run,self.ports).get(0xffff)
 			pool.close()
 			pool.join()
 			print '-'*60
 			print u'{}[-] 扫描完成耗时: {} 秒.{}'.format(self.O,time()-self.time,self.W)
 		except Exception as e:
 			print e
+		except KeyboardInterrupt:
+			print self.R + '\n[-] user aborded!'
+			sys.exit(1)
 
 	def check_target(self):
 		#判断目标是域名还是还是ip地址
