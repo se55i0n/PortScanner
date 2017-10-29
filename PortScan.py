@@ -44,7 +44,7 @@ class Scanner(object):
 	def check_cdn(self):
 		#目标域名cdn检测
 		myResolver = dns.resolver.Resolver()
-		myResolver.lifetime = myResolver.timeout = 1.0
+		myResolver.lifetime = myResolver.timeout = 2.0
 		dnsserver = [['114.114.114.114'],['8.8.8.8'],['223.6.6.6']]
 		try:
 			for i in dnsserver:
