@@ -123,7 +123,7 @@ class Scanner(object):
 				socket.gethostbyname(self.target), self.W)
 			print '-'*60
 			#线程数
-			pool = ThreadPool(processes=50)
+			pool = ThreadPool(processes=100)
 			#get传递超时时间，用于捕捉ctrl+c
 			pool.map_async(self.run, self.ports).get(0xffff)
 			pool.close()
